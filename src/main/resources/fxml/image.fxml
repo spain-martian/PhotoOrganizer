@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="900.0" prefWidth="1350.0" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx" fx:controller="com.photoOrganizer.controller.FullImageController">
+
+    <ImageView fx:id="fullImageView" fitHeight="900.0" preserveRatio="true" onMouseClicked="#onImageClicked"/>
+
+</VBox>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox focusTraversable="true" prefWidth="400" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.photoOrganizer.controller.SettingsController">
+    <Label fx:id="warningLabel" managed="false" styleClass="label-warning"
+           text="Once the images are loaded, the settings cannot be edited."/>
+    <HBox prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="1.0"/>
+        </VBox.margin>
+        <Label text="Root Folder:">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+        </Label>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="chooserButton" mnemonicParsing="false" onAction="#onChangeRoot" text="Choose"/>
+    </HBox>
+    <Label fx:id="rootLabel" styleClass="font-bold" text="Root">
+        <padding>
+            <Insets top="3.0"/>
+        </padding>
+    </Label>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <Label text="Image file extensions">
+        <VBox.margin>
+            <Insets top="5.0"/>
+        </VBox.margin>
+    </Label>
+    <ListView fx:id="imgExtList" maxHeight="83.0" maxWidth="130.0" prefHeight="83.0" prefWidth="130.0">
+        <VBox.margin>
+            <Insets top="5.0"/>
+        </VBox.margin>
+    </ListView>
+    <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <TextField fx:id="imgExtField" prefWidth="160.0" promptText="Add extension (e.g. gif)"/>
+        <Button fx:id="imgExtAddButton" disable="true" mnemonicParsing="false" text="Add"/>
+        <Button fx:id="imgExtSaveButton" disable="true" mnemonicParsing="false" onAction="#onSaveImgExt" text="Save"/>
+    </HBox>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <Label text="Video file extensions">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Label>
+    <ListView fx:id="videoExtList" maxHeight="83.0" maxWidth="130.0" prefHeight="83.0" prefWidth="130.0">
+        <VBox.margin>
+            <Insets top="5.0"/>
+        </VBox.margin>
+    </ListView>
+    <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <TextField fx:id="videoExtField" prefWidth="160.0" promptText="Add extension (e.g. mpg)"/>
+        <Button fx:id="videoExtAddButton" disable="true" mnemonicParsing="false" text="Add"/>
+        <Button fx:id="videoExtSaveButton" disable="true" mnemonicParsing="false" onAction="#onSaveVideoExt"
+                text="Save"/>
+    </HBox>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <Label text="Folders to be excluded from the search">
+        <padding>
+            <Insets top="10.0"/>
+        </padding>
+    </Label>
+    <Label styleClass="label-example" text="E.g. Old, Camera\CCTV, Presentation\Draft\Remove"/>
+    <ListView fx:id="excludedList" maxHeight="83.0" maxWidth="213.0" prefHeight="83.0" prefWidth="213.0">
+        <VBox.margin>
+            <Insets top="5.0"/>
+        </VBox.margin>
+    </ListView>
+    <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <TextField fx:id="excludedListField" prefWidth="160.0" promptText="Add folder name"/>
+        <Button fx:id="excludedAddButton" disable="true" mnemonicParsing="false" text="Add"/>
+        <Button fx:id="excludedSaveButton" disable="true" mnemonicParsing="false" onAction="#onSaveExcluded"
+                text="Save"/>
+    </HBox>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <Label fx:id="startLabel" text="Label">
+        <padding>
+            <Insets top="10.0"/>
+        </padding>
+    </Label>
+    <Label styleClass="label-example" text="Format: YYYY-MM-DD"/>
+    <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <TextField fx:id="startDateField" onAction="#onAddStartDate" prefWidth="213.0"
+                   promptText="Set starting date or leave blank"/>
+        <Button fx:id="startDateButton" mnemonicParsing="false" onAction="#onAddStartDate" text="Change"/>
+    </HBox>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <Label fx:id="unsortedLabel" text="Label">
+        <padding>
+            <Insets top="10.0"/>
+        </padding>
+    </Label>
+    <Label styleClass="label-example" text="Example: Unsorted, new*, *toSort, *last*"/>
+    <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+        <TextField fx:id="unsortedMaskField" onAction="#onAddUnsorted" prefWidth="213.0" promptText="Add folder mask"/>
+        <Button fx:id="unsortedButton" mnemonicParsing="false" onAction="#onAddUnsorted" text="Change"/>
+    </HBox>
+    <Region prefHeight="200.0" prefWidth="200.0" styleClass="separator-v">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Region>
+    <HBox>
+        <Button fx:id="reloadButton" mnemonicParsing="false" onAction="#reloadAction" text="Clear All Loaded Files"
+                HBox.hgrow="NEVER">
+            <HBox.margin>
+                <Insets top="10.0"/>
+            </HBox.margin>
+        </Button>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button alignment="CENTER" onAction="#closeAction" text="Close" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets top="10.0"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <padding>
+        <Insets bottom="15.0" left="20.0" right="15.0" top="10.0"/>
+    </padding>
+</VBox>

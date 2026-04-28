@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<HBox fx:id="rowNode" spacing="5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.photoOrganizer.controller.FolderController">
+    <Button fx:id="moveHereButton" onAction="#moveHereAction" styleClass="move-here-button">
+        <graphic>
+            <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                <Image url="@../icons/icon-download.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button fx:id="folderButton" styleClass="folder-button" mnemonicParsing="false">
+        <graphic>
+            <HBox fx:id="folderButtonGraphic" alignment="TOP_CENTER" spacing="6" styleClass="folder-container">
+                <StackPane>
+                    <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                        <Image url="@../icons/icon-folder.png"/>
+                    </ImageView>
+                    <ImageView fx:id="plusIcon" fitHeight="16" fitWidth="16" preserveRatio="true">
+                        <Image url="@../icons/icon-plus.png"/>
+                    </ImageView>
+                </StackPane>
+                <Label fx:id="folderLabel">
+                    <HBox.margin>
+                        <Insets top="2.0"/>
+                    </HBox.margin>
+                </Label>
+            </HBox>
+        </graphic>
+    </Button>
+</HBox>

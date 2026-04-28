@@ -1,0 +1,20 @@
+{
+  "rootFolder": "C:\\Photo\\Test",
+  "imageTypes": [
+    "jpg",
+    "jpeg",
+    "png",
+    "bmp"
+  ],
+  "videoTypes": [
+    "mp4",
+    "mov",
+    "3gp",
+    "mpg"
+  ],
+  "startDate": "",
+  "unsortedFolder": "*unsorted*",
+  "excludedFolders": [
+    "Edited"
+  ]
+}

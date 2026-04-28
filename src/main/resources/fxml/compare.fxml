@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="370.0" prefWidth="800.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.photoOrganizer.controller.CompareFilesController">
+    <HBox alignment="TOP_CENTER">
+        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 16;" text="There is already a file with this name. You can either overwrite it or rename the source file before moving it." textAlignment="CENTER">
+            <HBox.margin>
+                <Insets bottom="15.0" top="20.0" />
+            </HBox.margin>
+        </Label>
+    </HBox>
+    <HBox spacing="40.0">
+        <Label fx:id="folderSourceLabel" alignment="CENTER" maxWidth="355.0" prefWidth="355.0" text="Source">
+            <HBox.margin>
+                <Insets left="15.0" right="30.0" />
+            </HBox.margin>
+        </Label>
+        <Label fx:id="folderToLabel" alignment="CENTER" text="Target" />
+    </HBox>
+    <HBox alignment="CENTER">
+        <ImageView fx:id="sourceImageView" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+        <Label text="=&gt;">
+            <HBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </HBox.margin>
+        </Label>
+        <ImageView fx:id="toImageView" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+    </HBox>
+    <HBox alignment="TOP_CENTER" spacing="15.0">
+        <Button fx:id="overwriteButton" mnemonicParsing="false" onAction="#overwriteAction" text="Move and Overwrite" />
+        <Button fx:id="renameSourceImage" disable="true" mnemonicParsing="false" onAction="#renameSourceAction" text="Rename Before Moving:" />
+        <TextField fx:id="nameField" minWidth="200.0" prefWidth="200.0" />
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+    </HBox>
+    <HBox alignment="TOP_RIGHT">
+        <Button mnemonicParsing="false" onAction="#closeAction" text="Cancel">
+            <HBox.margin>
+                <Insets right="30.0" />
+            </HBox.margin>
+        </Button>
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+    </HBox>
+</VBox>

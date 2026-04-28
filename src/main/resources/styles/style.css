@@ -1,0 +1,243 @@
+.root {
+    navyblue: #354e70;
+    bg: #f5f7fa;
+    mediumgrey: #7297ba;
+    darkblue: #2080a0;
+    grayline: #dadce0;
+    ultragray: #e5e7eb;
+    lightred: #ff474c;
+    goldenyellow: #DA9100;
+    lightblue: #e6f2ff;
+
+    -fx-font-size: 13;
+    -fx-background-color: bg;
+    -fx-text-fill: navyblue;
+}
+
+HBox {-fx-background-color: bg;}
+VBox {-fx-background-color: bg;}
+
+.scroll-pane > .viewport {
+   -fx-background-color: bg;
+}
+
+.hbox-button-group {
+    -fx-border-color: grayline;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-spacing: 8;
+    -fx-padding: 8;
+}
+
+.folder-container {
+    -fx-padding: 0 10 2 10;
+    -fx-background-color: white;
+    -fx-border-color: grayline;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.list-container {
+    -fx-padding: 0 0 0 5;
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-text-fill: navyblue;
+    -fx-font-size: 13;
+    -fx-font-family: "Rawline Semibold";
+}
+
+.main-label {
+    -fx-font-size: 14;
+}
+
+.label-example {
+    -fx-text-fill: mediumgrey;
+    -fx-font-family: "Rawline Regular";
+}
+
+.label-warning {
+    -fx-text-fill: lightred;
+}
+
+.label-unsorted {
+    -fx-border-color: goldenyellow;
+    -fx-text-fill: goldenyellow;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-padding: 1 3;
+}
+
+.font-regular { -fx-font-family: "Rawline Regular"; }
+.font-medium { -fx-font-family: "Rawline Medium"; }
+.font-semibold { -fx-font-family: "Rawline SemiBold"; }
+.font-bold { -fx-font-family: "Rawline Bold"; }
+
+.button {
+    -fx-background-radius: 6;
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+    -fx-font-size: 13;
+    -fx-font-family: "Rawline Semibold";
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1e8bb8;
+}
+
+.button:pressed {
+    -fx-background-color: #166a8a;
+}
+
+.text-area {
+    -fx-font-size: 12;
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 0;
+}
+
+.main-button {
+    -fx-font-size: 14;
+}
+
+.delete-button {
+    -fx-text-fill: #ffe0d8;
+}
+
+.delete-button:hover {
+    -fx-background-color: lightred;
+}
+
+.folder-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: navyblue;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-graphic-text-gap: 6;
+}
+
+.folder-button:hover {
+    -fx-background-color: transparent;
+}
+
+.folder-button:pressed {
+    -fx-background-color: transparent;
+}
+
+.selected-folder-button {
+    -fx-background-color: lightblue;
+    -fx-border-color: darkblue;
+}
+
+.start-button {
+    -fx-padding: 10 0 10 0;
+}
+
+.move-here-button {
+    -fx-padding: 3 3 4 3;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+}
+
+.move-here-button:hover {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: grayline;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+
+.move-here-button:pressed {
+    -fx-background-color: transparent;
+}
+
+.list-del-button {
+    -fx-background-image: url("/icons/icon-bin.png");
+    -fx-min-width: 12;
+    -fx-min-height: 12;
+    -fx-background-size: 12 12;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.settings-button {
+    -fx-padding: 7;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.unselect-button {
+    -fx-padding: 0 4 0 5;
+    -fx-background-color: lightblue;
+    -fx-border-color: darkblue;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: navyblue;
+}
+
+.move-option-button {
+    -fx-font-size: 12;
+    -fx-font-family: "Rawline Medium";
+    -fx-padding: 1 7 1 7;
+}
+
+.list-label {
+    -fx-text-fill: navyblue;
+    -fx-min-height: 21;
+    -fx-background-color: transparent;
+}
+
+.separator-h {
+    -fx-background-color: ultragray;
+    -fx-pref-width: 1;
+    -fx-min-width: 1;
+    -fx-max-width: 1;
+}
+
+.separator-v {
+    -fx-background-color: ultragray;
+    -fx-pref-height: 1;
+    -fx-min-height: 1;
+    -fx-max-height: 1;
+}
+
+.context-menu {
+    -fx-background-color: white;
+}
+
+.context-menu .menu-item {
+    -fx-text-fill: navyblue;
+    -fx-font-size: 13;
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: white;
+}
+
+.tooltip {
+    -fx-font-size: 13;
+    -fx-background-radius: 6;
+    -fx-background-color: white;
+    -fx-border-color: navyblue;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-text-fill: navyblue;
+}
+
+.bg-transparent {
+    -fx-background-color: transparent;
+}
+
+.invisible-disabled:disabled {
+    -fx-opacity: 0;
+}

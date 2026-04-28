@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import java.lang.Double?>
+<?import javafx.scene.shape.Rectangle?>
+<VBox fx:id="videoBox" alignment="CENTER" prefHeight="900.0" prefWidth="1350.0" spacing="10"
+      stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.photoOrganizer.controller.FullVideoController">
+
+    <HBox fx:id="videoContainer" prefWidth="900" prefHeight="800">
+        <MediaView fx:id="mediaView"/>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10">
+        <Slider fx:id="progressSlider">
+            <HBox.margin>
+                <Insets left="50.0" right="50.0"/>
+            </HBox.margin>
+        </Slider>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="playPauseButton" alignment="CENTER" contentDisplay="CENTER" prefWidth="40" minHeight="30"
+                prefHeight="30" styleClass="folder-container" textAlignment="CENTER">
+            <graphic>
+                <StackPane prefHeight="30">
+                    <Polygon fx:id="playIcon">
+                        <points>
+                            <Double fx:value="0.0"/>
+                            <Double fx:value="0.0"/>
+                            <Double fx:value="0.0"/>
+                            <Double fx:value="18.0"/>
+                            <Double fx:value="13.5"/>
+                            <Double fx:value="9.0"/>
+                        </points>
+                    </Polygon>
+                    <HBox fx:id="pauseIcon" alignment="CENTER" spacing="4" styleClass="folder-container">
+                        <Rectangle width="4" height="16" arcWidth="2" arcHeight="2"/>
+                        <Rectangle width="4" height="16" arcWidth="2" arcHeight="2"/>
+                    </HBox>
+                </StackPane>
+            </graphic>
+        </Button>
+        <Button fx:id="stopButton" alignment="CENTER" contentDisplay="CENTER" prefWidth="40" minHeight="30"
+                prefHeight="30" styleClass="folder-container" textAlignment="CENTER">
+            <graphic>
+                <Rectangle width="15" height="15" arcWidth="2" arcHeight="2"/>
+            </graphic>
+        </Button>
+    </HBox>
+</VBox>
