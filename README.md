@@ -32,8 +32,9 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
   Browse all images and videos ordered by date.
 
 * 📁 **Quick File Organization**
-  Move files into the appropriate folder with minimal effort.
-  Create new folders on the fly if needed.
+  * Move files into the appropriate folder with minimal effort.
+  * Create new folders on the fly if needed.
+  * Find the destination folder by name
 
 * 🧠 **Smart Suggestions**
   See folders previously used for files taken on the same date—helpful for grouping related content.
@@ -73,7 +74,9 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
     * Skip 5, 20, or 200 items
     * Jump to any position
     * Jump by date (e.g., `2021-` or `2021-01`) to the first matching or next available item
-
+* 🧾 **Logging**
+  - Logs key user actions and errors
+  - Log files are stored locally for troubleshooting
 ---
 
 ## Use Case

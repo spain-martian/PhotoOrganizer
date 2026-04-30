@@ -79,7 +79,7 @@ public class FolderController {
     private ContextMenu getContextMenu() {
         MenuItem item1 = new MenuItem("Create subfolder");
         item1.setOnAction(e -> createSubfolderDialog());
-        MenuItem item3 = new MenuItem("Select subfolder");
+        MenuItem item3 = new MenuItem("Select folder");
         item3.setOnAction(e -> selectSubfolder());
 
         ContextMenu menu;
