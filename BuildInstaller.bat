@@ -1,0 +1,2 @@
+jlink --module-path "D:\Program Files\Java\openjfx-21.0.10_windows-x64_bin-jmods\javafx-jmods-21.0.10;%JAVA_HOME%\jmods" --add-modules javafx.controls,javafx.fxml,javafx.media,java.naming --output runtime
+jpackage --name PhotoOrganizer --input target --main-jar PhotoOrganizer.jar --main-class com.photoOrganizer.Main --type exe --icon packaging/app.ico --runtime-image runtime --win-console --resource-dir packaging --app-version 2.0
