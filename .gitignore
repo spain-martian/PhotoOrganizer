@@ -36,11 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
 /.idea
 /runtime
 *.bat
-/packaging
 *.exe
-/packaging
-Untitled 1.odt
 *.log
