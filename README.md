@@ -142,7 +142,20 @@ The application includes a configuration file where you can:
 
 ## Screenshots
 
-*(To be added)*
+### Main View
+![Main View](screenshots/main-view.png)
+
+### Folder Selection
+![Folder Selection](screenshots/select-folder.png)
+
+### Duplicate Detection
+![Duplicate Detection](screenshots/duplicates.png)
+
+### Search Folder
+![Search Folder](screenshots/search-folder.png)
+
+### Settings
+![Settings](screenshots/settings.png)
 
 ---
 
