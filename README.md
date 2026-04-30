@@ -1,6 +1,8 @@
 # PhotoOrganizer
-A JavaFX desktop application to efficiently organize large collections of photos and videos into a structured folder system.
+JavaFX desktop app to organize photos and videos by date, location, and folder structure.
 
+### Main View
+![Main View](screenshots/main-view.png)
 ---
 
 ## Overview
@@ -22,8 +24,7 @@ Maintaining this manually can be tedious—especially after importing hundreds o
 Organizing photos manually is repetitive, time-consuming, and easy to postpone. Existing tools often feel too heavy, too automatic, or not flexible enough for a custom folder structure.
 
 This project focuses on a simple idea:
-make manual sorting **fast, visual, and efficient**, while still keeping full control over where files go.
-
+Make manual sorting **fast, visual, and efficient**, while keeping full control over file organization.
 ---
 
 ## Features
@@ -34,7 +35,7 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
 * 📁 **Quick File Organization**
   * Move files into the appropriate folder with minimal effort.
   * Create new folders on the fly if needed.
-  * Find the destination folder by name
+  * Quickly find destination folders by name
 
 * 🧠 **Smart Suggestions**
   See folders previously used for files taken on the same date—helpful for grouping related content.
@@ -43,7 +44,7 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
 
     * Thumbnails for both images and videos
     * Large preview for images
-    * External video player for videos
+    * Opens videos in an external player
 
 * 🗺️ **GPS Integration**
   If a photo contains GPS metadata, open its location directly in Google Maps.
@@ -74,9 +75,10 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
     * Skip 5, 20, or 200 items
     * Jump to any position
     * Jump by date (e.g., `2021-` or `2021-01`) to the first matching or next available item
+
 * 🧾 **Logging**
-  - Logs key user actions and errors
-  - Log files are stored locally for troubleshooting
+  * Logs key user actions and errors
+  * Log files are stored locally for troubleshooting
 ---
 
 ## Use Case
@@ -91,9 +93,22 @@ make manual sorting **fast, visual, and efficient**, while still keeping full co
 
 ## Tech Stack
 
-* Java 17+ (or newer)
-* JavaFX 21
-* Maven
+![Java](https://img.shields.io/badge/Java-17+-blue)
+![JavaFX](https://img.shields.io/badge/JavaFX-21-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+---
+## FFmpeg
+
+This application uses FFmpeg for video processing.
+FFmpeg is automatically downloaded during the build process.
+Source: https://www.gyan.dev/ffmpeg/builds/
+
+FFmpeg is a free and open-source project: https://ffmpeg.org/  
+License: LGPL/GPL (depending on build)
+See: https://ffmpeg.org/legal.html
+
+FFmpeg is distributed as a separate executable and is not covered by this project's MIT license.
 
 ---
 
@@ -116,10 +131,12 @@ cd PhotoOrganizer
 
 # Run with Maven
 mvn clean javafx:run
+> If you encounter issues running the app, ensure JavaFX is properly configured or use the provided installer.
 ```
+---
+## Download
 
-> Make sure JavaFX is properly configured in your environment if required.
-
+* You can download the latest version from the Releases page.
 ---
 
 ## Configuration
@@ -135,15 +152,12 @@ The application includes a configuration file where you can:
 
 ## Notes
 
-* The app is designed for personal/local use with large photo collections.
+* Designed for local use with large photo collections
 * Folder structure is flexible—you are not forced into a strict hierarchy.
 
 ---
 
 ## Screenshots
-
-### Main View
-![Main View](screenshots/main-view.png)
 
 ### Folder Selection
 ![Folder Selection](screenshots/select-folder.png)
