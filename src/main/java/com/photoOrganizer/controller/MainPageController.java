@@ -211,6 +211,7 @@ public class MainPageController {
         setStartDateLabel("");
 
         startButton.setDisable(false);
+        pos = 0;
     }
 
     public Task<Void> createLoadingTask() {

@@ -47,7 +47,7 @@ public class DuplicateService {
     public void removeImageData(ImageData imageData) {
         Map<String, List<ImageData>> byName = mapBySize.get(imageData.size);
         if (byName != null) {
-            List<ImageData> list = byName.get(imageData.getPath().toString());
+            List<ImageData> list = byName.get(imageData.getFileName());
             if (list != null) {
                 list.remove(imageData);
                 if (list.size() < 2) {

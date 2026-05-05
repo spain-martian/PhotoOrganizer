@@ -68,7 +68,7 @@ public class DirsScanner {
             public FileVisitResult visitFile(Path filePath, BasicFileAttributes attrs) {
 
                 String name = filePath.toString().toLowerCase();
-                if (config.isAllowedType(name)) {
+                if (attrs.size() > 0 && config.isAllowedType(name)) {
                     DirEntry dirEntry = dirMap.get(filePath.getParent());
 
                     if (dirEntry == null) {
